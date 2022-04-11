@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <windows.h>
 #include <time.h>
 #include <stdlib.h>
@@ -258,7 +258,7 @@ void SnakeMain()
 
     gameField.CreateBoundaries(219);
     snake.ToStartValues();
-    for (int i = 0; i < 25; i++)
+    for (int i = 0; i < 40; i++)
     {
         gameField.SpownPrice();
     }
@@ -268,7 +268,7 @@ void SnakeMain()
         if (snake.IsGameOver()) break;
         snake.Move(gameField.field);
         gameField.Show();
-        Sleep(50);
+        Sleep(60);
     }
 
 }
@@ -292,18 +292,19 @@ int main()
         {
         case 1:
             system("cls");
-            printf("Get Ready");
+            printf("The speed is high, so get ready");
             Sleep(3000);
             SnakeMain();
+            Sleep(500);
             break;
         case 2:
             system("cls");
-            printf("You play as a snake, to win you need to collect all the fruits without crashing into walls or your tail\n");
+            printf("You play as a snake, to win you need to collect all the fruits without crashing into walls or your tail\nThe snake is controlled via 'W' 'A' 'S' 'D', respectively 'W' -up, 'A'- left, 'S'- down,'D'- right\n");
             system("pause");
             break;
         case 3:
             system("cls");
-            printf("https://github.com/fliprayn?tab=projects\n");
+            printf("Double click on the link to select and copy\nhttps://github.com/fliprayn/AnUnusualSnake\n");
             system("pause");
             break;
         case 4:
